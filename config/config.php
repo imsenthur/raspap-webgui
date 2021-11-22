@@ -1,6 +1,6 @@
 <?php
 
-define('RASPI_BRAND_TEXT', 'RaspAP');
+define('RASPI_BRAND_TEXT', 'Neurobionics');
 define('RASPI_CONFIG', '/etc/raspap');
 define('RASPI_CONFIG_NETWORK', RASPI_CONFIG.'/networking/defaults.json');
 define('RASPI_ADMIN_DETAILS', RASPI_CONFIG.'/raspap.auth');
