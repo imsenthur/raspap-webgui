@@ -118,7 +118,7 @@ $bridgedEnabled = getBridgedState();
             <img src="app/img/u-m.png" class="navbar-logo" width="64" height="64">
           </div>
           <div class="col-xs ml-2">
-            <div class="ml-1">Status</div>
+            <div class="ml-1"></div>
             <div class="info-item-xs"><span class="icon">
               <i class="fas fa-circle <?php echo ($hostapd_led); ?>"></i></span> <?php echo _("Hotspot").' '. _($hostapd_status); ?>
             </div>
