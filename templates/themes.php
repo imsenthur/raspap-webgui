@@ -17,7 +17,7 @@
           </div>
           <div class="col-xs-3 col-sm-3">
             <label for="code"><?php echo _("Color"); ?></label>
-            <input class="form-control color-input" value="#00274C" aria-label="color" />
+            <input class="form-control color-input" value="#00274c" aria-label="color" />
           </div>
         </div>
         <form action="system_info" method="POST">
