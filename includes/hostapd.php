@@ -324,7 +324,7 @@ function SaveHostAPDConfig($wpa_array, $enc_types, $modes, $interfaces, $status)
             // Default wlan0 config
             $def_ip = array();
             $config = [ '# RaspAP wlan0 configuration' ];
-            $config[] = 'interface wlan0';
+            $config[] = 'profile static_wlan0';
             $config[] = 'static ip_address='.$ip_address;
             $config[] = 'static routers='.$routers;
             $config[] = 'static domain_name_server='.$domain_name_server;
