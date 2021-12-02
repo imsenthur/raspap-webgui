@@ -252,24 +252,22 @@ function updateDnsmasqConfig($iface,$status)
 function updateDHCPConfig($iface,$status)
 {
     $cfg[] = '# RaspAP '.$iface.' configuration';
-    $cfg[] = 'interface '.$iface;
+    $cfg[] = 'profile static_'.$iface;
     if (isset($_POST['StaticIP'])) {
         $mask = ($_POST['SubnetMask'] !== '' && $_POST['SubnetMask'] !== '0.0.0.0') ? '/'.mask2cidr($_POST['SubnetMask']) : null;
-        $cfg[] = 'static ip_address='.$_POST['StaticIP'].$mask;
+        $cfg[] = '  static ip_address='.$_POST['StaticIP'].$mask;
     }
     if (isset($_POST['DefaultGateway'])) {
-      $cfg[] = 'static routers='.$_POST['DefaultGateway'];
+      $cfg[] = '    static routers='.$_POST['DefaultGateway'];
     }
     if ($_POST['DNS1'] !== '' || $_POST['DNS2'] !== '') {
-        $cfg[] = 'static domain_name_server='.$_POST['DNS1'].' '.$_POST['DNS2'];
+        $cfg[] = '  static domain_name_server='.$_POST['DNS1'].' '.$_POST['DNS2'];
     }
     if ($_POST['Metric'] !== '') {
       $cfg[] = 'metric '.$_POST['Metric'];
     }
-    if ($_POST['Fallback'] == 1) {
-        $cfg[] = 'profile static_'.$iface;
-        $cfg[] = 'fallback static_'.$iface;
-    }
+    $cfg[] = 'interface '.$iface;
+    $cfg[] = 'fallback static_'.$iface;
     $cfg[] = $_POST['DefaultRoute'] == '1' ? 'gateway' : 'nogateway';
     $dhcp_cfg = file_get_contents(RASPI_DHCPCD_CONFIG);
     if (!preg_match('/^interface\s'.$iface.'$/m', $dhcp_cfg)) {
