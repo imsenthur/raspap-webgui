@@ -91,9 +91,9 @@ $bridgedEnabled = getBridgedState();
     <link rel="icon" type="image/png" sizes="16x16" href="app/icons/favicon-16x16.png">
     <link rel="icon" type="image/png" href="app/icons/favicon.png" />
     <link rel="manifest" href="app/icons/site.webmanifest">
-    <link rel="mask-icon" href="app/icons/safari-pinned-tab.svg" color="#00274C">
+    <link rel="mask-icon" href="app/icons/safari-pinned-tab.svg" color="#00274c">
     <meta name="msapplication-config" content="app/icons/browserconfig.xml">
-    <meta name="msapplication-TileColor" content="#00274C">
+    <meta name="msapplication-TileColor" content="#00274c">
     <meta name="theme-color" content="#ffffff">
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
