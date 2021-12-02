@@ -3,7 +3,7 @@ var elem = document.querySelector('.color-input');
 var hueb = new Huebee( elem, {
     notation: 'hex',
     saturations: 2,
-    customColors: [ '#00274C', '#dd4814', '#ea0', '#19f', '#333' ],
+    customColors: [ '#00274c', '#dd4814', '#ea0', '#19f', '#333' ],
     className: 'light-picker',
     hue0: 210
 });
@@ -11,7 +11,7 @@ var hueb = new Huebee( elem, {
 // Set custom color if defined
 var color = getCookie('color');
 if (color == null || color == '') {
-    color = '#00274C';
+    color = '#00274c';
 }
 hueb.setColor(color);
 
