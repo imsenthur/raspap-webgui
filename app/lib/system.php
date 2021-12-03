@@ -71,7 +71,7 @@ class Sysinfo
 
     public function hostapdStatus()
     {
-        exec('pidof hostapd | wc -l', $status);
+        exec('cat /etc/raspap/connectivity.txt | grep "True" | wc -l', $status);
         return $status;
     }
 
